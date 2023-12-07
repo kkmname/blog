@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "anonymous-pro";
+    src: url("/font/anonymous_pro/AnonymousPro-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "orbit";
+    src: url("/font/anonymous_pro/Orbit-Regular.ttf") format("truetype");
+}
+
+* {
+    font-family: "anonymous-pro", "orbit";
+}
