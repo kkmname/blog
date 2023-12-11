@@ -1,7 +1,7 @@
 .tree, .tree ul {
     margin:0;
     padding:0;
-    list-style:none
+    list-style:none;
 }
 .tree ul {
     margin-left:1em;
@@ -37,21 +37,25 @@
     margin-top:-1px;
     position:absolute;
     top:1em;
-    left:0
+    left:0;
 }
+
 .tree ul li:last-child:before {
     background:#fff;
     height:auto;
     top:1em;
     bottom:0
 }
+
 .indicator {
     margin-right:5px;
 }
+
 .tree li a {
     text-decoration: none;
     color:#369;
 }
+
 .tree li button, .tree li button:active, .tree li button:focus {
     text-decoration: none;
     color:#369;
@@ -60,4 +64,20 @@
     margin:0px 0px 0px 0px;
     padding:0px 0px 0px 0px;
     outline: 0;
+}
+
+.tree li a[class=file] {
+    padding: 0 0 0 20px;
+    background-image: url(/image/icon/file.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+.tree li a[class=directory] {
+    padding: 0 0 0 20px;
+    background-image: url(/image/icon/directory.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px;
 }
