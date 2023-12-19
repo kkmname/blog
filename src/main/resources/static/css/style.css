@@ -1,7 +1,0 @@
-.file::before {
-    list-style-image: url(/image/icon/file.png);
-}
-
-.directory::before {
-    list-style-image: url(/image/icon/directory.png);
-}

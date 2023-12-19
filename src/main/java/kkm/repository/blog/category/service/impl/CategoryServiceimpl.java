@@ -20,7 +20,6 @@ public class CategoryServiceimpl implements CategoryService {
 
     @Override
     public List<CategoryEntity> getCategories() {
-        System.out.println(categoryRepository.findAll().size());
         return categoryRepository.findAll();
     }
 }

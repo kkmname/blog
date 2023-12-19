@@ -15,8 +15,9 @@
     <script src='/lib/TreeView/js/treeview.js'></script>
     <script src='/js/category.js'></script>
     <script>
-        const categories = fetchCategories();
-        console.log(categories);
+        $(function() {
+            category.init();
+        });
     </script>
 </head>
 <body class="bg-body-tertiary">
@@ -29,29 +30,11 @@
     <main class="container mt-5">
         <div class="row">
             <nav class="col-md-3">
-                <ul id="tree2">
-                    <li><p class="well"><strong>Subjects</strong></p></li>
-                    <ul>
-                        <li><a href="#" class="file">HOME</a>
-                        <li><a href="#" class="file">ABOUT</a>
-                        <li><a href="#" class="directory">TECH</a>
-                            <ul>
-                                <li><a href="#" class="file">Java</a></li>
-                                <li><a href="#" class="file">Spring</a></li>
-                                <li><a href="#" class="directory">Docker</a>
-                                    <ul>
-                                        <li><a href="#" class="file">Docker Engine</a></li>
-                                        <li><a href="#" class="file">Docker Swarm</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" class="file">Ngnix</a></li>
-                                <li><a href="#" class="file">Proxmox</a></li>
-                                <li><a href="#" class="file">Kubernates</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="file">MOVIE</a>
-                        </li>
+                <ul id="tree">
+                    <li>
+                        <a href="#" class="directory">Subjects</a>
+                    </li>
+                    <ul id="tree-for-root">
                     </ul>
                 </ul>
             </nav>

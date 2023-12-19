@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //Initialization of treeviews
-    $('#tree2').treed({openedClass : 'glyphicon-folder-open', closedClass : 'glyphicon-folder-close'});
+    $('#tree').treed({openedClass : 'glyphicon-folder-open', closedClass : 'glyphicon-folder-close'});
 });
 
 $.fn.extend({
