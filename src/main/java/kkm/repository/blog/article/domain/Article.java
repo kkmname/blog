@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-import kkm.repository.blog.category.domain.CategoryEntity;
+import kkm.repository.blog.category.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -43,5 +43,5 @@ public class Article {
 
     @ManyToOne
     @JoinColumn(name="CATEGORY_ID", nullable=false)
-    private CategoryEntity category;
+    private Category category;
 }

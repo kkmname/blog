@@ -1,14 +1,12 @@
 package kkm.repository.blog.category.service.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kkm.repository.blog.category.domain.CategoryEntity;
+import kkm.repository.blog.category.domain.Category;
 import kkm.repository.blog.category.repository.CategoryRepository;
 import kkm.repository.blog.category.service.CategoryService;
 
@@ -19,7 +17,16 @@ public class CategoryServiceimpl implements CategoryService {
     CategoryRepository categoryRepository;
 
     @Override
-    public List<CategoryEntity> getCategories() {
+    public List<Category> getCategories() {
         return categoryRepository.findAll();
+    }
+
+    @Override
+    public Category getCategory(String categoryId) {
+        Optional<Category> categories = categoryRepository.findById(Long.parseLong(categoryId));
+        if (categories.isPresent()) {
+            return categories.get();
+        }
+        return null;
     }
 }

@@ -2,8 +2,9 @@ package kkm.repository.blog.category.service;
 
 import java.util.List;
 
-import kkm.repository.blog.category.domain.CategoryEntity;
+import kkm.repository.blog.category.domain.Category;
 
 public interface CategoryService {
-    public List<CategoryEntity> getCategories();
+    public List<Category> getCategories();
+    public Category getCategory(String categoryId);
 }
